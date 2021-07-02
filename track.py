@@ -36,7 +36,38 @@ def write_results(filename, results, data_type):
                 line = save_format.format(frame=frame_id, id=track_id, x1=x1, y1=y1, x2=x2, y2=y2, w=w, h=h)
                 f.write(line)
     logger.info('save results to {}'.format(filename))
+def conversion_frame_init(opt,frame_rate):
+    global tracker,timer,results,frame_id,objopt,resultscamera
+    objopt = opt
+    tracker = JDETracker(opt, frame_rate=frame_rate)
+    timer = Timer()
+    results = []
+    resultscamera = [None] * 1000
+    
+    frame_id = 0
 
+def conversion_frame(img, img0):
+    global tracker,timer,resultscamera,frame_id,objopt
+    # run tracking
+    timer.tic()
+    blob = torch.from_numpy(img).cuda().unsqueeze(0)
+    online_targets = tracker.update(blob, img0)
+    online_tlwhs = []
+    online_ids = []
+    for t in online_targets:
+        tlwh = t.tlwh
+        tid = t.track_id
+        vertical = tlwh[2] / tlwh[3] > 1.6
+        if tlwh[2] * tlwh[3] > objopt.min_box_area and not vertical:
+            online_tlwhs.append(tlwh)
+            online_ids.append(tid)
+    timer.toc()
+    count = frame_id%1000
+    resultscamera[count] = (frame_id + 1, online_tlwhs, online_ids)
+    online_im = vis.plot_tracking(img0, online_tlwhs, online_ids, frame_id=frame_id,
+                                          fps=1. / timer.average_time)
+    frame_id += 1
+    return online_im,resultscamera[count]
 
 def eval_seq(opt, dataloader, data_type, result_filename, save_dir=None, show_image=True, frame_rate=30):
     '''

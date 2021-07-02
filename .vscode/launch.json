@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Flask",
+            "type": "python",
+            "request": "launch",
+            "program": "app.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--output-format",
+                "video",
+                "--weights",
+                // "model/jde.1088x608.uncertainty.pt",
+                "model/jde_576x320_uncertainty.pt",
+                "--cfg",
+                "cfg/yolov3_576x320.cfg"
+            ]
+        },
+        {
+            "name": "demo",
+            "type": "python",
+            "request": "launch",
+            "program": "demo.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--weights",
+                "model/jde.1088x608.uncertainty.pt",
+                "--input-video",
+                "/Towards-Realtime-MOT/2.mp4",
+                // "0",
+                "--output-format",
+                "video",
+                // "--output-root",
+                // "output/"
+            ]
+        }
+    ]
+}

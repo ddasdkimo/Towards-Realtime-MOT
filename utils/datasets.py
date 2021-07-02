@@ -81,7 +81,8 @@ class LoadVideo:  # for inference
         if not os.path.isfile(path):
             raise FileExistsError
         
-        self.cap = cv2.VideoCapture(path)        
+        # self.cap = cv2.VideoCapture(path)
+        self.cap = cv2.VideoCapture(0)
         self.frame_rate = int(round(self.cap.get(cv2.CAP_PROP_FPS)))
         self.vw = int(self.cap.get(cv2.CAP_PROP_FRAME_WIDTH))
         self.vh = int(self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
@@ -105,7 +106,9 @@ class LoadVideo:  # for inference
 
     def __next__(self):
         self.count += 1
-        if self.count == len(self):
+        # if self.count == len(self):
+        #     raise StopIteration
+        if self.count == 100:
             raise StopIteration
         # Read image
         res, img0 = self.cap.read()  # BGR

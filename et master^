@@ -1,0 +1,74 @@
+[33mf8d8668[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m 改為相機串流
+[33m88df0e5[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m Update README.md
+[33mc2654cd[m Update README.md
+[33mc9dd7ee[m Update DATASET_ZOO.md
+[33mae95021[m Update README.md
+[33mc7f7351[m Update README.md
+[33m5618eb5[m Bugfix (#122)
+[33m7ec8461[m Update README.md
+[33m24f351d[m Documentation (#95)
+[33m0a0665e[m Update demo.py
+[33m2eff9c0[m Update utils.py (#93)
+[33ma23837c[m Added docstring. (#92)
+[33mf03efb2[m Minor documentation fixes (#91)
+[33ma340fde[m Update README.md
+[33mf25e37f[m Update README.md
+[33mdee692b[m Modify demo.py
+[33m04e7e79[m Update README.md
+[33m66f0225[m Update README.md
+[33m0c340d3[m clean
+[33m23d3995[m Merge branch 'master' of https://github.com/Zhongdao/Towards-Realtime-MOT
+[33mc408261[m 1.Accelerate the association step. 2.Provide more trained models with different input resoulution.
+[33m439000a[m add docker file and edit the README (#77)
+[33m7216bca[m Merge branch 'master' of https://github.com/Zhongdao/Towards-Realtime-MOT
+[33m57533d8[m Add motion scores
+[33me6c39ef[m non_max_suppression(): Remove unsupported options (#74)
+[33m43aad41[m Update DATASET_ZOO.md
+[33m4ae1df2[m Update README.md
+[33m27809fd[m fixed a spelling mistake
+[33m822abff[m fixed a spelling mistake
+[33m68aee10[m test multi-embedding
+[33mbe11601[m replace maskrcnn-benchmark nms with torchvision nms
+[33m1cb8cee[m Update DATASET_ZOO.md
+[33mb781998[m Update README.md
+[33m5941936[m cleanup
+[33m2042751[m training data
+[33mea9a876[m Update DATASET_ZOO.md
+[33m84231c3[m Update README.md
+[33mf58a9f6[m Create DATASET_ZOO.md
+[33mf4a65be[m Update README.md
+[33mdb49ba8[m training data
+[33m4276457[m training data
+[33m58725e1[m add train list
+[33mbcabd3b[m Update README.md
+[33m3b191db[m Update README.md
+[33mb0f5d19[m Update README.md
+[33m2bf6876[m update pretrained model
+[33m357a747[m Update README.md
+[33m163baae[m add gif demo
+[33m12b8e76[m Merge branch 'master' of https://github.com/Zhongdao/Towards-Realtime-MOT
+[33m81ae5e7[m add gif demo
+[33ma4b8120[m fix a bug in track.py
+[33m130c0b9[m Update README.md
+[33macaadd5[m Merge branch 'master' of https://github.com/Zhongdao/Towards-Realtime-MOT
+[33mb90e8b8[m Update README.md
+[33m7e741b2[m cl
+[33m562cec6[m Update README.md
+[33mf0d8e13[m Update README.md
+[33mce3bf97[m Update README.md
+[33m748eb41[m add syncbn
+[33me4ea0ba[m fix a bug in track.py
+[33ma830e47[m Merge branch 'master' of https://github.com/Zhongdao/Towards-Realtime-MOT ..
+[33m514b4fb[m test
+[33m6d18662[m Update README.md
+[33m7352b62[m Update README.md
+[33m0bc8d79[m hh
+[33me47a5ae[m add video demo
+[33macc0a09[m can save video output now
+[33md287dee[m fix conflict
+[33m793e1a2[m merge
+[33m0c9521b[m delete
+[33m6033216[m add bbox.so
+[33m2a3d46d[m update gitignore
+[33m28514de[m setup
+[33mbb5566b[m Initial commit
